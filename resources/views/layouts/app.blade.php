@@ -73,43 +73,7 @@
         </nav>
 
         <main class="py-4">
-            <div class="container">
-                <div class="row justify-content-center">
-
-
-                    <div class="col-md-12">
-                        <div class="card">
-
-                        <ul class="nav nav-tabs">
-                            <li class="nav-item">
-                                <a href="{{ route('home') }}" class="active nav-link"> Home </a>
-                            </li>
-                            <li class="nav-item">
-                            <a href="{{ route('site-settings') }}" class="nav-link"> Site Settings </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ route('profile-settings') }}" class="nav-link"> Profile Settings </a>
-                            </li>
-
-                        </ul>
-    
-                            <!-- <div class="card-header">
-                                <a href="{{ route('home') }}" class="active"> Home </a>
-                                |
-                                <a href="{{ route('site-settings') }}" class="active"> Site Settings </a>
-                                |
-                                <a href="{{ route('profile-settings') }}"> Profile Settings </a>
-                            </div> -->
-
-                            <div class="card-body">
-                                @yield('content')
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
+            @yield('content')
         </main>
     </div>
 </body>

@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use App\Settings;
 use App\User;
 use Illuminate\Http\Request;
@@ -67,8 +68,17 @@ class SettingsController extends Controller
     }
     public function update_profile(Request $request)
     {
-        
-        return $request;
+        $this->validate($request,[
+            'name' => 'required|min:3|max:50',
+            'email' => 'email',
+            'password' => 'required|confirmed|min:6',
+        ]);
+
+        $user = User::where('id', '=', Auth::user()->id)->first();
+        $request['password'] = Hash::make($request->password);
+        $user->update($request->all());
+
+
         //
     }
     public function update_site(Request $request)

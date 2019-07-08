@@ -14,7 +14,14 @@
 Route::get('/', 'SettingsController@index');
 
 Auth::routes();
-
+Route::get('/clear-cache', function() {
+    Artisan::call('cache:clear');
+    $exitCode = Artisan::call('config:clear');
+    $exitCode = Artisan::call('cache:clear');
+    $exitCode = Artisan::call('config:cache');
+    // return 'DONE'; //Return anything
+    return redirect (url('/'));
+});
 Route::get('/home', 'SettingsController@dashboard')->name('home');
 Route::get('/site-settings', 'SettingsController@site_settings')->name('site-settings');
 Route::get('/profile-settings', 'SettingsController@profile_settings')->name('profile-settings');

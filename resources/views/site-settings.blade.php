@@ -68,7 +68,7 @@
             <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Phone') }}</label>
 
             <div class="col-md-6">
-                <input id="phone" type="phone" class="form-control @error('phone') is-invalid @enderror" value="{{ $settings->phone }}" name="phone" required autocomplete="phone">
+                <input id="phone" type="phone" class="form-control @error('phone') is-invalid @enderror" value="{{ $settings->phone }}" name="phone">
 
                 @error('phone')
                     <span class="invalid-feedback" role="alert">
@@ -82,7 +82,7 @@
             <label for="address" class="col-md-4 col-form-label text-md-right">{{ __('Address') }}</label>
 
             <div class="col-md-6">
-                <input id="address" type="address" class="form-control @error('address') is-invalid @enderror" value="{{ $settings->address }}" name="address" required autocomplete="address">
+                <input id="address" type="address" class="form-control @error('address') is-invalid @enderror" value="{{ $settings->address }}" name="address">
 
                 @error('address')
                     <span class="invalid-feedback" role="alert">
@@ -99,7 +99,7 @@
             <label for="fb_link" class="col-md-4 col-form-label text-md-right">{{ __('Facebook Link') }}</label>
 
             <div class="col-md-6">
-                <input id="fb_link" type="fb_link" class="form-control @error('fb_link') is-invalid @enderror" value="{{ $settings->fb_link }}" name="fb_link" required autocomplete="fb_link">
+                <input id="fb_link" type="fb_link" class="form-control @error('fb_link') is-invalid @enderror" value="{{ $settings->fb_link }}" name="fb_link" >
 
                 @error('fb_link')
                     <span class="invalid-feedback" role="alert">
@@ -113,7 +113,7 @@
             <label for="insta_link" class="col-md-4 col-form-label text-md-right">{{ __('Instagram Link') }}</label>
 
             <div class="col-md-6">
-                <input id="insta_link" type="insta_link" class="form-control @error('insta_link') is-invalid @enderror" value="{{ $settings->insta_link }}" name="insta_link" required autocomplete="insta_link">
+                <input id="insta_link" type="insta_link" class="form-control @error('insta_link') is-invalid @enderror" value="{{ $settings->insta_link }}" name="insta_link">
 
                 @error('insta_link')
                     <span class="invalid-feedback" role="alert">
@@ -127,7 +127,7 @@
             <label for="youtube_link" class="col-md-4 col-form-label text-md-right">{{ __('Youtube link') }}</label>
 
             <div class="col-md-6">
-                <input id="youtube_link" type="youtube_link" class="form-control @error('youtube_link') is-invalid @enderror" value="{{ $settings->youtube_link }}" name="youtube_link" required autocomplete="youtube_link">
+                <input id="youtube_link" type="youtube_link" class="form-control @error('youtube_link') is-invalid @enderror" value="{{ $settings->youtube_link }}" name="youtube_link">
 
                 @error('youtube_link')
                     <span class="invalid-feedback" role="alert">
@@ -141,7 +141,7 @@
             <label for="twitter_link" class="col-md-4 col-form-label text-md-right">{{ __('Twitter link') }}</label>
 
             <div class="col-md-6">
-                <input id="twitter_link" type="twitter_link" class="form-control @error('twitter_link') is-invalid @enderror" value="{{ $settings->twitter_link }}" name="twitter_link" required autocomplete="twitter_link">
+                <input id="twitter_link" type="twitter_link" class="form-control @error('twitter_link') is-invalid @enderror" value="{{ $settings->twitter_link }}" name="twitter_link"">
 
                 @error('twitter_link')
                     <span class="invalid-feedback" role="alert">
@@ -155,7 +155,7 @@
             <label for="bg_image" class="col-md-4 col-form-label text-md-right">{{ __('Background Image') }}</label>
 
             <div class="col-md-6">
-                <input id="bg_image" type="file" class="form-control @error('bg_image') is-invalid @enderror" value="{{ $settings->bg_image }}" name="bg_image" required autocomplete="bg_image">
+                <input id="bg_image" type="file" class="form-control @error('bg_image') is-invalid @enderror" value="{{ $settings->bg_image }}" name="bg_image">
 
                 @error('bg_image')
                     <span class="invalid-feedback" role="alert">

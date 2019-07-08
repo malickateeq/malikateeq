@@ -102,31 +102,34 @@ class SettingsController extends Controller
         $settings = Settings::where('id', '>', '0')->first(); 
 
         if( !empty($settings['bg_image']) && $request['bg_image']!="" ){
-            $image_path = "images/".$settings['bg_image']; 
+            $image_path = public_path("images/").$settings['bg_image']; 
             if(File::exists($image_path)) {
                 File::delete($image_path);
             }
         }
-        //Background image
-        $image = $request['bg_image'];
-        $imagename = '0'.time().'.'.$image->getClientOriginalExtension();
-        $destinationPath = public_path('/images');
-        $image->move($destinationPath, $imagename);
-        $requestData['bg_image'] = $imagename;
-
-
-        if(!empty($settings['favicon']) && $request['favicon']!="" ){
-            $image_path = "images/".$settings['favicon']; 
-            if(File::exists($image_path)) {
-                File::delete($image_path);
-            }
+        if($request['bg_image']!="")
+        {
+            //Background image
+            $image = $request['bg_image'];
+            $imagename = '0'.time().'.'.$image->getClientOriginalExtension();
+            $destinationPath = public_path('/images');
+            $image->move($destinationPath, $imagename);
+            $requestData['bg_image'] = $imagename;
         }
-        // //Favicon image
-        $image = $request['favicon'];
-        $imagename = '1'.time().'.'.$image->getClientOriginalExtension();
-        $destinationPath = public_path('/images');
-        $image->move($destinationPath, $imagename);
-        $requestData['favicon'] = $imagename;
+
+
+        // if(!empty($settings['favicon']) && $request['favicon']!="" ){
+        //     $image_path = public_path("images/").$settings['favicon']; 
+        //     if(File::exists($image_path)) {
+        //         File::delete($image_path);
+        //     }
+        // }
+        // // //Favicon image
+        // $image = $request['favicon'];
+        // $imagename = '1'.time().'.'.$image->getClientOriginalExtension();
+        // $destinationPath = public_path('/images');
+        // $image->move($destinationPath, $imagename);
+        // $requestData['favicon'] = $imagename;
         
 
         $settings->update($requestData);

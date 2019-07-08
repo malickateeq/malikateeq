@@ -101,18 +101,18 @@ class SettingsController extends Controller
 
         $settings = Settings::where('id', '>', '0')->first(); 
 
-        if( !empty($settings['bg_image']) && $request['bg_image']!="" ){
-            $image_path = public_path("images/").$settings['bg_image']; 
+        if( !empty($settings['bg_image']) && !empty($request['bg_image']) ){
+            $image_path = ("images/").$settings['bg_image']; 
             if(File::exists($image_path)) {
                 File::delete($image_path);
             }
         }
-        if($request['bg_image']!="")
+        if(!empty($request['bg_image']))
         {
             //Background image
             $image = $request['bg_image'];
             $imagename = '0'.time().'.'.$image->getClientOriginalExtension();
-            $destinationPath = public_path('/images');
+            $destinationPath = ('images/');
             $image->move($destinationPath, $imagename);
             $requestData['bg_image'] = $imagename;
         }

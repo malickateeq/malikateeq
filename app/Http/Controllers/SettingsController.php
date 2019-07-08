@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Settings;
 use App\User;
+use File;
 use Illuminate\Http\Request;
 
 class SettingsController extends Controller
@@ -78,12 +79,62 @@ class SettingsController extends Controller
         $request['password'] = Hash::make($request->password);
         $user->update($request->all());
 
-
+        //Redirect to dashboard
+        $settings = Settings::where('id', '>', '0')->first();
+        $user = User::where('id', '>', '0')->first(); 
+        return view('home')->with('settings', $settings)->with('user', $user);
         //
     }
     public function update_site(Request $request)
     {
-        return $request;
+        $this->validate($request,[
+            'title' => 'required|min:3|max:50',
+            'name' => 'required|min:3|max:50',
+            'description' => 'required|min:3|max:50',
+            'one_liner' => 'required|min:3|max:50',
+            'bg_image' => 'sometimes|image|mimes:jpg,png,jpeg,gif,svg',
+            'favicon' => 'sometimes|image|mimes:jpg,png,jpeg,gif,svg'
+        ]);
+
+        $requestData = $request->all();
+
+
+        $settings = Settings::where('id', '>', '0')->first(); 
+
+        if( !empty($settings['bg_image']) && $request['bg_image']!="" ){
+            $image_path = "images/".$settings['bg_image']; 
+            if(File::exists($image_path)) {
+                File::delete($image_path);
+            }
+        }
+        //Background image
+        $image = $request['bg_image'];
+        $imagename = '0'.time().'.'.$image->getClientOriginalExtension();
+        $destinationPath = public_path('/images');
+        $image->move($destinationPath, $imagename);
+        $requestData['bg_image'] = $imagename;
+
+
+        if(!empty($settings['favicon']) && $request['favicon']!="" ){
+            $image_path = "images/".$settings['favicon']; 
+            if(File::exists($image_path)) {
+                File::delete($image_path);
+            }
+        }
+        // //Favicon image
+        $image = $request['favicon'];
+        $imagename = '1'.time().'.'.$image->getClientOriginalExtension();
+        $destinationPath = public_path('/images');
+        $image->move($destinationPath, $imagename);
+        $requestData['favicon'] = $imagename;
+        
+
+        $settings->update($requestData);
+
+        //Redirect to dashboard
+        $settings = Settings::where('id', '>', '0')->first();
+        $user = User::where('id', '>', '0')->first(); 
+        return view('home')->with('settings', $settings)->with('user', $user);
         //
     }
 

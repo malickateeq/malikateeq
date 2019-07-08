@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}">
         <title> {{ $settings->title }} </title>
 
         <!-- Fonts -->
@@ -22,7 +22,8 @@
 
         <style>
             html, body {
-                background: url("images/bg-image.jpg")no-repeat center center;
+                /* background: url("images/bg-image.jpg")no-repeat center center; */
+                background: url("images/{{$settings->bg_image}}")no-repeat center center;
                 background-size: cover;
                 font-family: "Arial", sans-serif;
                 font-weight: 200;
@@ -168,13 +169,27 @@
                     /* color: red; */
                 }
                 .title {
-                    font-size: 15px;
+                    font-size: 35px;
                 }
                 .sub-title{
-                    font-size: 7px;
+                    font-size: 12px;
                 }
                 .description{
-                    font-size: 7px;
+                    font-size: 9px;
+                }
+            }
+            @media screen and (max-width: 250px) {
+                div.box {
+                    /* color: red; */
+                }
+                .title {
+                    font-size: 20px;
+                }
+                .sub-title{
+                    font-size: 10px;
+                }
+                .description{
+                    font-size: px;
                 }
             }
             .social-icons img{

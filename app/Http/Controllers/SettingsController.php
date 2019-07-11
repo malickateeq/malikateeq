@@ -115,6 +115,7 @@ class SettingsController extends Controller
             $destinationPath = ('images/');
             $image->move($destinationPath, $imagename);
             $requestData['bg_image'] = $imagename;
+            
         }
 
 

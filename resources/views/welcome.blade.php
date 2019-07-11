@@ -273,17 +273,17 @@
 
                     <div class="row">
                         <div class="col-md-12 social-icons">
-                            <a href="{{ $settings->youtube_link }}">
-                                <img src="{{asset('/images/youtube.png')}}" alt="" target="_blank">
+                            <a href="{{ $settings->youtube_link }}" target="_blank">
+                                <img src="{{asset('/images/youtube.png')}}" alt="">
                             </a>
-                            <a href="{{ $settings->insta_link }}">
-                                <img src="{{asset('/images/instagram.png')}}" alt="" target="_blank">
+                            <a href="{{ $settings->insta_link }}" target="_blank">
+                                <img src="{{asset('/images/instagram.png')}}" alt="">
                             </a>
-                            <a href="{{ $settings->fb_link }}">
-                                <img src="{{asset('/images/facebook.png')}}" alt="" target="_blank">
+                            <a href="{{ $settings->fb_link }}" target="_blank">
+                                <img src="{{asset('/images/facebook.png')}}" alt="">
                             </a>
-                            <a href="{{ $settings->twitter_link }}">
-                                <img src="{{asset('/images/twitter.png')}}" alt="" target="_blank">
+                            <a href="{{ $settings->twitter_link }}" target="_blank">
+                                <img src="{{asset('/images/twitter.png')}}" alt="">
                             </a>
                         </div>
                     </div>

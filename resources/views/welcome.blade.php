@@ -165,12 +165,12 @@
                     font-size: 15px;
                 }
             }
-            @media screen and (max-width: 450px) {
+            @media screen and (max-width: 400px) {
                 div.box {
                     /* color: red; */
                 }
                 .title {
-                    font-size: 35px;
+                    font-size: 30px;
                 }
                 .sub-title{
                     font-size: 12px;
@@ -179,7 +179,7 @@
                     font-size: 9px;
                 }
             }
-            @media screen and (max-width: 250px) {
+            @media screen and (max-width: 280px) {
                 div.box {
                     /* color: red; */
                 }
@@ -190,11 +190,17 @@
                     font-size: 10px;
                 }
                 .description{
-                    font-size: px;
+                    font-size: 10px;
+                }
+                .social-icons img{
+                    width: 10px;
+                    height: 10px;
+                    margin: 13px 8px;
                 }
             }
             .social-icons img{
-                width: 20px; height: 20px;
+                width: 20px; 
+                height: 20px;
                 margin: 13px 8px;
             }
             .social-icons img:hover{

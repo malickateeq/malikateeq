@@ -29,7 +29,7 @@
                 font-family: "Arial", sans-serif;
                 font-weight: 200;
                 height: 100vh;
-                margin: 0;
+                margin: 0px;
                 color: white;
             }
 
@@ -80,10 +80,7 @@
             .description{
                 font-family: "arial";
             }
-            .box{
-                margin: 0px 0px 0px 0px;
-                padding: 0px 5px 0px 70px;
-            }
+
             .ext-links{
                 padding: 10px 0px;
                 font-size: 13px;
@@ -93,33 +90,24 @@
                 border: 2px solid white;
             }
             @media screen and (max-width: 1200px) {
-                div.box {
-                    /* color: blue; */
-                }
+
                 .title {
                     font-size: 50px;
                 }
             }
             @media screen and (max-width: 1200px) {
-                div.box {
-                    /* color: violet; */
-                }
+
                 .title {
                     font-size: 45px;
                 }
             }
             @media screen and (max-width: 1000px) {
-                div.box {
-                    /* color: purple; */
-                }
+
                 .title {
                     font-size: 40px;
                 }
             }
             @media screen and (max-width: 900px) {
-                div.box {
-                    /* color: grey; */
-                }
                 .title {
                     font-size: 30px;
                 }
@@ -131,9 +119,6 @@
                 }
             }
             @media screen and (max-width: 700px) {
-                div.box {
-                    /* color: blue; */
-                }
                 .title {
                     font-size: 35px;
                 }
@@ -145,11 +130,6 @@
                 }
             }
             @media screen and (max-width: 600px) {
-                div.box {
-                    /* color: white; */
-                    margin: 0px 30px 0px 30px;
-                    padding: 0px 5px 0px 10px;
-                }
                 div.btns {
                     /* color: white; */
                     margin: 0px 100px 0px 0px;
@@ -176,26 +156,63 @@
                     font-size: 12px;
                 }
                 .description{
-                    font-size: 9px;
+                    font-size: 14px;
+                }
+                div.row
+                {
+                    display: inline;
+                    margin-right: 0px;
+                    margin-left: 0px;
+                }
+                div.container-fluid
+                {
+                    margin: 0px;
+                    margin: 0px;
                 }
             }
-            @media screen and (max-width: 280px) {
+            @media screen and (max-width: 335px) {
                 div.box {
                     /* color: red; */
                 }
                 .title {
-                    font-size: 20px;
+                    font-size: 25px;
                 }
                 .sub-title{
                     font-size: 10px;
                 }
                 .description{
-                    font-size: 10px;
+                    font-size: 12px;
                 }
-                .social-icons img{
+                div.social-icons img{
                     width: 10px;
                     height: 10px;
                     margin: 13px 8px;
+                }
+                div.container-fluid
+                {
+                    margin: 0px;
+                    margin: 0px;
+                }
+            }
+            @media screen and (max-width: 280px) {
+                .title {
+                    font-size: 15px;
+                }
+                .sub-title{
+                    font-size: 8px;
+                }
+                .description{
+                    font-size: 10px;
+                }
+                div.social-icons img{
+                    width: 10px;
+                    height: 10px;
+                    margin: 13px 3px;
+                }
+                div.container-fluid
+                {
+                    margin: 0px;
+                    margin: 0px;
                 }
             }
             .social-icons img{
@@ -230,10 +247,10 @@
 
             <div class="row container-fluid">
 
-                <div class="col-md-6 col-sm-0 col-xs-0">
+                <div class="col-md-7 col-sm-4 col-xs-0">
                 </div>
                 
-                <div class="col-md-6 col-sm-12 col-xs-12 box">
+                <div class="col-md-5 col-sm-8 col-xs-12">
 
                     <div class="row">
                         <div class="col-md-12 title">
@@ -254,7 +271,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-lg-5 col-md-8 col-sm-5 col-xs-2 btns my-2">
+                        <div class="col-lg-6 col-md-10 col-sm-6 col-xs-6 btns my-2">
                             <a href="{{$settings->btn1_link}}" class="btn btn-outline-light btn-block ext-links" target="_blank">
                                 {{$settings->btn1_text}}
                             </a>
@@ -262,7 +279,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-lg-5 col-md-8 col-sm-5 col-xs-2 btns my-2">
+                        <div class="col-lg-6 col-md-10 col-sm-6 col-xs-6 btns my-2">
                             <a href="{{$settings->btn2_link}}" class="btn btn-outline-light btn-block ext-links" target="_blank">
                                 {{$settings->btn2_text}}
                             </a>
@@ -270,7 +287,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-lg-5 col-md-8 col-sm-5 col-xs-2 btns my-2">
+                        <div class="col-lg-6 col-md-10 col-sm-6 col-xs-6 btns my-2">
                             <a href="{{$settings->btn3_link}}" class="btn btn-outline-light btn-block ext-links" target="_blank">
                                 {{$settings->btn3_text}}
                             </a>

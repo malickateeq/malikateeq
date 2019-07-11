@@ -88,10 +88,10 @@ class SettingsController extends Controller
     public function update_site(Request $request)
     {
         $this->validate($request,[
-            'title' => 'required|min:3|max:50',
-            'name' => 'required|min:3|max:50',
-            'description' => 'required|min:3|max:50',
-            'one_liner' => 'required|min:3|max:50',
+            'title' => 'required|min:3|max:185',
+            'name' => 'required|min:3|max:185',
+            'description' => 'required|min:3|max:185',
+            'one_liner' => 'required|min:3|max:185',
             'bg_image' => 'sometimes|image|mimes:jpg,png,jpeg,gif,svg',
             'favicon' => 'sometimes|image|mimes:jpg,png,jpeg,gif,svg'
         ]);

@@ -249,7 +249,7 @@
 
                     <div class="row">
                         <div class="col-lg-5 col-md-8 col-sm-5 col-xs-2 btns my-2">
-                            <a href="{{$settings->btn1_link}}" class="btn btn-outline-light btn-block ext-links">
+                            <a href="{{$settings->btn1_link}}" class="btn btn-outline-light btn-block ext-links" target="_blank">
                                 {{$settings->btn1_text}}
                             </a>
                         </div>
@@ -257,7 +257,7 @@
 
                     <div class="row">
                         <div class="col-lg-5 col-md-8 col-sm-5 col-xs-2 btns my-2">
-                            <a href="{{$settings->btn2_link}}" class="btn btn-outline-light btn-block ext-links">
+                            <a href="{{$settings->btn2_link}}" class="btn btn-outline-light btn-block ext-links" target="_blank">
                                 {{$settings->btn2_text}}
                             </a>
                         </div>
@@ -265,7 +265,7 @@
 
                     <div class="row">
                         <div class="col-lg-5 col-md-8 col-sm-5 col-xs-2 btns my-2">
-                            <a href="{{$settings->btn3_link}}" class="btn btn-outline-light btn-block ext-links">
+                            <a href="{{$settings->btn3_link}}" class="btn btn-outline-light btn-block ext-links" target="_blank">
                                 {{$settings->btn3_text}}
                             </a>
                         </div>
@@ -274,16 +274,16 @@
                     <div class="row">
                         <div class="col-md-12 social-icons">
                             <a href="{{ $settings->youtube_link }}">
-                                <img src="{{asset('/images/youtube.png')}}" alt="">
+                                <img src="{{asset('/images/youtube.png')}}" alt="" target="_blank">
                             </a>
                             <a href="{{ $settings->insta_link }}">
-                                <img src="{{asset('/images/instagram.png')}}" alt="">
+                                <img src="{{asset('/images/instagram.png')}}" alt="" target="_blank">
                             </a>
                             <a href="{{ $settings->fb_link }}">
-                                <img src="{{asset('/images/facebook.png')}}" alt="">
+                                <img src="{{asset('/images/facebook.png')}}" alt="" target="_blank">
                             </a>
                             <a href="{{ $settings->twitter_link }}">
-                                <img src="{{asset('/images/twitter.png')}}" alt="">
+                                <img src="{{asset('/images/twitter.png')}}" alt="" target="_blank">
                             </a>
                         </div>
                     </div>

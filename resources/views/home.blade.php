@@ -22,6 +22,14 @@
             <li>  <b>Other links: </b> {{$settings->other_links}} </li>
             <h3> Background Image </h3>
             <li>  <b>Background Image: </b> {{$settings->bg_image}} </li>
+
+            <h3> Buttons Settings </h3>
+            <li>  <b>Button1 Text: </b> {{$settings->btn1_text}} </li>
+            <li>  <b>Button1 Link: </b> {{$settings->btn1_link}} </li>
+            <li>  <b>Button2 Text: </b> {{$settings->btn2_text}} </li>
+            <li>  <b>Button2 Link: </b> {{$settings->btn2_link}} </li>
+            <li>  <b>Button3 Text: </b> {{$settings->btn3_text}} </li>
+            <li>  <b>Button3 Link: </b> {{$settings->btn3_link}} </li>
         </ul>
     </div>
 

@@ -93,7 +93,17 @@ class SettingsController extends Controller
             'description' => 'required|min:3|max:185',
             'one_liner' => 'required|min:3|max:185',
             'bg_image' => 'sometimes|image|mimes:jpg,png,jpeg,gif,svg',
-            'favicon' => 'sometimes|image|mimes:jpg,png,jpeg,gif,svg'
+            'favicon' => 'sometimes|image|mimes:jpg,png,jpeg,gif,svg',
+            'fb_link' => 'min:3|max:185',
+            'insta_link' => 'min:3|max:185',
+            'twitter_link' => 'min:3|max:185',
+            'youtube_link' => 'min:3|max:185',
+            'btn1_text' => 'min:3|max:185',
+            'btn1_link' => 'min:3|max:185',
+            'btn2_text' => 'min:3|max:185',
+            'btn2_link' => 'min:3|max:185',
+            'btn3_text' => 'min:3|max:185',
+            'btn3_link' => 'min:3|max:185',
         ]);
 
         $requestData = $request->all();

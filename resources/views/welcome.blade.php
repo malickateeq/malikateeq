@@ -196,6 +196,9 @@
                 width: 20px; height: 20px;
                 margin: 13px 8px;
             }
+            .social-icons img:hover{
+                filter: brightness(60%);
+            }
 
         </style>
     </head>

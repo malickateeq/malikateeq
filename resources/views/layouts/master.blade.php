@@ -80,7 +80,7 @@
 
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a href="{{ route('home') }}" class="active nav-link"> Home </a>
+                    <a href="{{ route('home') }}" class="nav-link"> Home </a>
                 </li>
                 <li class="nav-item">
                 <a href="{{ route('site-settings') }}" class="nav-link"> Site Settings </a>

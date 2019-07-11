@@ -151,7 +151,95 @@
             </div>
         </div>
 
+
+
+        <h3 class="text-center mt-5"> Buttons Settings </h3>
+
         <div class="form-group row">
+            <label for="btn1_text" class="col-md-4 col-form-label text-md-right">{{ __('Button1 Text') }}</label>
+
+            <div class="col-md-6">
+                <input id="btn1_text" type="text" class="form-control @error('btn1_text') is-invalid @enderror" value="{{ $settings->btn1_text }}" name="btn1_text">
+
+                @error('btn1_text')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="btn1_link" class="col-md-4 col-form-label text-md-right">{{ __('Button1 Link') }}</label>
+
+            <div class="col-md-6">
+                <input id="btn1_link" type="text" class="form-control @error('btn1_link') is-invalid @enderror" value="{{ $settings->btn1_link }}" name="btn1_link">
+
+                @error('btn1_link')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <label for="btn2_text" class="col-md-4 col-form-label text-md-right">{{ __('Button2 Text') }}</label>
+
+            <div class="col-md-6">
+                <input id="btn2_text" type="text" class="form-control @error('btn2_text') is-invalid @enderror" value="{{ $settings->btn2_text }}" name="btn2_text">
+
+                @error('btn2_text')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="btn2_link" class="col-md-4 col-form-label text-md-right">{{ __('Button2 Link') }}</label>
+
+            <div class="col-md-6">
+                <input id="btn2_link" type="text" class="form-control @error('btn2_link') is-invalid @enderror" value="{{ $settings->btn2_link }}" name="btn2_link">
+
+                @error('btn2_link')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="btn3_text" class="col-md-4 col-form-label text-md-right">{{ __('Button3 Text') }}</label>
+
+            <div class="col-md-6">
+                <input id="btn3_text" type="text" class="form-control @error('btn3_text') is-invalid @enderror" value="{{ $settings->btn3_text }}" name="btn3_text">
+
+                @error('btn3_text')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="btn3_link" class="col-md-4 col-form-label text-md-right">{{ __('Button3 Link') }}</label>
+
+            <div class="col-md-6">
+                <input id="btn3_link" type="text" class="form-control @error('btn3_link') is-invalid @enderror" value="{{ $settings->btn3_link }}" name="btn3_link">
+
+                @error('btn3_link')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+        </div>
+
+
+
+        <div class="form-group row my-5">
             <label for="bg_image" class="col-md-4 col-form-label text-md-right">{{ __('Background Image') }}</label>
 
             <div class="col-md-6">

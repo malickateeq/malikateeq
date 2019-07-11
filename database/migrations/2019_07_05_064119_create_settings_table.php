@@ -31,6 +31,17 @@ class CreateSettingsTable extends Migration
             $table->string('insta_link')->nullable();
             $table->string('youtube_link')->nullable();
             $table->string('other_links')->nullable();
+            
+            $table->string('btn1_text')->nullable();
+            $table->string('btn1_link')->nullable();
+
+            
+            $table->string('btn2_text')->nullable();
+            $table->string('btn2_link')->nullable();
+
+            
+            $table->string('btn3_text')->nullable();
+            $table->string('btn3_link')->nullable();
 
             $table->timestamps();
         });
@@ -40,6 +51,9 @@ class CreateSettingsTable extends Migration
                 'title' => "malik ateeq | y",
                 'one_liner' => "Explorer.!!",
                 'description' => "my description",
+                'btn1_text' => "DARKEST",
+                'btn2_text' => "PINTERESTED",
+                'btn3_text' => "INCLUMBERS",
                 'created_at' => date("Y-m-d H:i:s")
             ],
         ];

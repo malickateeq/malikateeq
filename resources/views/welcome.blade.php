@@ -25,6 +25,7 @@
                 /* background: url("images/bg-image.jpg")no-repeat center center; */
                 background: url("images/{{$settings->bg_image}}")no-repeat center center;
                 background-size: cover;
+                background-color: #263b31;
                 font-family: "Arial", sans-serif;
                 font-weight: 200;
                 height: 100vh;
@@ -248,19 +249,25 @@
 
                     <div class="row">
                         <div class="col-lg-5 col-md-8 col-sm-5 col-xs-2 btns my-2">
-                            <button type="button" class="btn btn-outline-light btn-block ext-links">Darkest Hour</button>
+                            <a href="{{$settings->btn1_link}}" class="btn btn-outline-light btn-block ext-links">
+                                {{$settings->btn1_text}}
+                            </a>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-lg-5 col-md-8 col-sm-5 col-xs-2 btns my-2">
-                            <button type="button" class="btn btn-outline-light btn-block ext-links">Inclumbels</button>
+                            <a href="{{$settings->btn2_link}}" class="btn btn-outline-light btn-block ext-links">
+                                {{$settings->btn2_text}}
+                            </a>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-lg-5 col-md-8 col-sm-5 col-xs-2 btns my-2">
-                            <button type="button" class="btn btn-outline-light btn-block ext-links">Pintersted</button>
+                            <a href="{{$settings->btn3_link}}" class="btn btn-outline-light btn-block ext-links">
+                                {{$settings->btn3_text}}
+                            </a>
                         </div>
                     </div>
 

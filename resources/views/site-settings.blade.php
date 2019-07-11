@@ -68,7 +68,7 @@
             <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Phone') }}</label>
 
             <div class="col-md-6">
-                <input id="phone" type="phone" class="form-control @error('phone') is-invalid @enderror" value="{{ $settings->phone }}" name="phone">
+                <input id="phone" type="phone" maxlength="20" class="form-control @error('phone') is-invalid @enderror" value="{{ $settings->phone }}" name="phone">
 
                 @error('phone')
                     <span class="invalid-feedback" role="alert">
@@ -82,7 +82,7 @@
             <label for="address" class="col-md-4 col-form-label text-md-right">{{ __('Address') }}</label>
 
             <div class="col-md-6">
-                <input id="address" type="address" class="form-control @error('address') is-invalid @enderror" value="{{ $settings->address }}" name="address">
+                <input id="address" type="address" maxlength="185" class="form-control @error('address') is-invalid @enderror" value="{{ $settings->address }}" name="address">
 
                 @error('address')
                     <span class="invalid-feedback" role="alert">
@@ -99,7 +99,7 @@
             <label for="fb_link" class="col-md-4 col-form-label text-md-right">{{ __('Facebook Link') }}</label>
 
             <div class="col-md-6">
-                <input id="fb_link" type="fb_link" class="form-control @error('fb_link') is-invalid @enderror" value="{{ $settings->fb_link }}" name="fb_link" >
+                <input id="fb_link" type="fb_link" maxlength="185" class="form-control @error('fb_link') is-invalid @enderror" value="{{ $settings->fb_link }}" name="fb_link" >
 
                 @error('fb_link')
                     <span class="invalid-feedback" role="alert">
@@ -113,7 +113,7 @@
             <label for="insta_link" class="col-md-4 col-form-label text-md-right">{{ __('Instagram Link') }}</label>
 
             <div class="col-md-6">
-                <input id="insta_link" type="insta_link" class="form-control @error('insta_link') is-invalid @enderror" value="{{ $settings->insta_link }}" name="insta_link">
+                <input id="insta_link" type="insta_link" maxlength="185" class="form-control @error('insta_link') is-invalid @enderror" value="{{ $settings->insta_link }}" name="insta_link">
 
                 @error('insta_link')
                     <span class="invalid-feedback" role="alert">
@@ -127,7 +127,7 @@
             <label for="youtube_link" class="col-md-4 col-form-label text-md-right">{{ __('Youtube link') }}</label>
 
             <div class="col-md-6">
-                <input id="youtube_link" type="youtube_link" class="form-control @error('youtube_link') is-invalid @enderror" value="{{ $settings->youtube_link }}" name="youtube_link">
+                <input id="youtube_link" type="youtube_link" maxlength="185" class="form-control @error('youtube_link') is-invalid @enderror" value="{{ $settings->youtube_link }}" name="youtube_link">
 
                 @error('youtube_link')
                     <span class="invalid-feedback" role="alert">
@@ -141,7 +141,7 @@
             <label for="twitter_link" class="col-md-4 col-form-label text-md-right">{{ __('Twitter link') }}</label>
 
             <div class="col-md-6">
-                <input id="twitter_link" type="twitter_link" class="form-control @error('twitter_link') is-invalid @enderror" value="{{ $settings->twitter_link }}" name="twitter_link"">
+                <input id="twitter_link" type="twitter_link" maxlength="185" class="form-control @error('twitter_link') is-invalid @enderror" value="{{ $settings->twitter_link }}" name="twitter_link"">
 
                 @error('twitter_link')
                     <span class="invalid-feedback" role="alert">
@@ -159,7 +159,7 @@
             <label for="btn1_text" class="col-md-4 col-form-label text-md-right">{{ __('Button1 Text') }}</label>
 
             <div class="col-md-6">
-                <input id="btn1_text" type="text" class="form-control @error('btn1_text') is-invalid @enderror" value="{{ $settings->btn1_text }}" name="btn1_text">
+                <input id="btn1_text" type="text" maxlength="30" class="form-control @error('btn1_text') is-invalid @enderror" value="{{ $settings->btn1_text }}" name="btn1_text">
 
                 @error('btn1_text')
                     <span class="invalid-feedback" role="alert">
@@ -172,7 +172,7 @@
             <label for="btn1_link" class="col-md-4 col-form-label text-md-right">{{ __('Button1 Link') }}</label>
 
             <div class="col-md-6">
-                <input id="btn1_link" type="text" class="form-control @error('btn1_link') is-invalid @enderror" value="{{ $settings->btn1_link }}" name="btn1_link">
+                <input id="btn1_link" type="text" maxlength="185" class="form-control @error('btn1_link') is-invalid @enderror" value="{{ $settings->btn1_link }}" name="btn1_link">
 
                 @error('btn1_link')
                     <span class="invalid-feedback" role="alert">
@@ -187,7 +187,7 @@
             <label for="btn2_text" class="col-md-4 col-form-label text-md-right">{{ __('Button2 Text') }}</label>
 
             <div class="col-md-6">
-                <input id="btn2_text" type="text" class="form-control @error('btn2_text') is-invalid @enderror" value="{{ $settings->btn2_text }}" name="btn2_text">
+                <input id="btn2_text" type="text" maxlength="30" class="form-control @error('btn2_text') is-invalid @enderror" value="{{ $settings->btn2_text }}" name="btn2_text">
 
                 @error('btn2_text')
                     <span class="invalid-feedback" role="alert">
@@ -200,7 +200,7 @@
             <label for="btn2_link" class="col-md-4 col-form-label text-md-right">{{ __('Button2 Link') }}</label>
 
             <div class="col-md-6">
-                <input id="btn2_link" type="text" class="form-control @error('btn2_link') is-invalid @enderror" value="{{ $settings->btn2_link }}" name="btn2_link">
+                <input id="btn2_link" type="text" maxlength="185" class="form-control @error('btn2_link') is-invalid @enderror" value="{{ $settings->btn2_link }}" name="btn2_link">
 
                 @error('btn2_link')
                     <span class="invalid-feedback" role="alert">
@@ -214,7 +214,7 @@
             <label for="btn3_text" class="col-md-4 col-form-label text-md-right">{{ __('Button3 Text') }}</label>
 
             <div class="col-md-6">
-                <input id="btn3_text" type="text" class="form-control @error('btn3_text') is-invalid @enderror" value="{{ $settings->btn3_text }}" name="btn3_text">
+                <input id="btn3_text" type="text" maxlength="30" class="form-control @error('btn3_text') is-invalid @enderror" value="{{ $settings->btn3_text }}" name="btn3_text">
 
                 @error('btn3_text')
                     <span class="invalid-feedback" role="alert">
@@ -227,7 +227,7 @@
             <label for="btn3_link" class="col-md-4 col-form-label text-md-right">{{ __('Button3 Link') }}</label>
 
             <div class="col-md-6">
-                <input id="btn3_link" type="text" class="form-control @error('btn3_link') is-invalid @enderror" value="{{ $settings->btn3_link }}" name="btn3_link">
+                <input id="btn3_link" type="text" maxlength="185" class="form-control @error('btn3_link') is-invalid @enderror" value="{{ $settings->btn3_link }}" name="btn3_link">
 
                 @error('btn3_link')
                     <span class="invalid-feedback" role="alert">

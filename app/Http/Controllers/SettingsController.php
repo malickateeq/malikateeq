@@ -119,18 +119,21 @@ class SettingsController extends Controller
         }
 
 
-        // if(!empty($settings['favicon']) && $request['favicon']!="" ){
-        //     $image_path = public_path("images/").$settings['favicon']; 
-        //     if(File::exists($image_path)) {
-        //         File::delete($image_path);
-        //     }
-        // }
-        // // //Favicon image
-        // $image = $request['favicon'];
-        // $imagename = '1'.time().'.'.$image->getClientOriginalExtension();
-        // $destinationPath = public_path('/images');
-        // $image->move($destinationPath, $imagename);
-        // $requestData['favicon'] = $imagename;
+        if(!empty($settings['favicon']) && $request['favicon']!="" ){
+            $image_path = public_path("images/").$settings['favicon']; 
+            if(File::exists($image_path)) {
+                File::delete($image_path);
+            }
+        }
+        if(!empty($request['favicon']))
+        {
+            //Favicon image
+            $image = $request['favicon'];
+            $imagename = '1'.time().'.'.$image->getClientOriginalExtension();
+            $destinationPath = public_path('/images');
+            $image->move($destinationPath, $imagename);
+            $requestData['favicon'] = $imagename;
+        }
         
 
         $settings->update($requestData);

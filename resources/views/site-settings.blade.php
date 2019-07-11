@@ -253,11 +253,11 @@
             </div>
         </div>
 
-        <!-- <div class="form-group row">
+        <div class="form-group row">
             <label for="favicon" class="col-md-4 col-form-label text-md-right">{{ __('Favicon Image') }}</label>
 
             <div class="col-md-6">
-                <input id="favicon" type="file" class="form-control @error('favicon') is-invalid @enderror" value="{{ $settings->favicon }}" name="favicon" required autocomplete="favicon">
+                <input id="favicon" type="file" class="form-control @error('favicon') is-invalid @enderror" value="{{ $settings->favicon }}" name="favicon" autocomplete="favicon">
 
                 @error('favicon')
                     <span class="invalid-feedback" role="alert">
@@ -265,7 +265,7 @@
                     </span>
                 @enderror
             </div>
-        </div> -->
+        </div>
 
 
         <div class="form-group row mb-0">

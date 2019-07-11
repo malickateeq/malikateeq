@@ -20,8 +20,9 @@
             <li>  <b>Twitter link: </b> {{$settings->twitter_link}} </li>
             <li>  <b>Youtube link: </b> {{$settings->youtube_link}} </li>
             <li>  <b>Other links: </b> {{$settings->other_links}} </li>
-            <h3> Background Image </h3>
+            <h3> Images </h3>
             <li>  <b>Background Image: </b> {{$settings->bg_image}} </li>
+            <li>  <b>Favicon Image: </b> {{$settings->favicon}} </li>
 
             <h3> Buttons Settings </h3>
             <li>  <b>Button1 Text: </b> {{$settings->btn1_text}} </li>

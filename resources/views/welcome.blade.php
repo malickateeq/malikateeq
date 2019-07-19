@@ -301,7 +301,7 @@
                             <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title text-dark text-center" id="contactModalLabel">CONTACT</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <button type="button" class="close" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
@@ -311,9 +311,8 @@
                                 <div class="modal-body text-dark">
                                     <div class="row name">
                                         <div class="form-group col-md-6">
-                                            <label for="first_name" class="col-form-label text-md-right">{{ __('First Name') }}</label>
-                                            <input id="first_name" type="first_name" class="form-control @error('first_name') is-invalid @enderror" name="first_name" value="{{ $user->first_name }}" required autocomplete="first_name">
-
+                                            <label for="first_name">{{ __('Name*') }}</label>
+                                            <input id="first_name" type="text" class="form-control @error('first_name') is-invalid @enderror" placeholder="First Name" name="first_name" required>
                                             @error('first_name')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
@@ -322,9 +321,8 @@
                                         </div>
 
                                         <div class="form-group col-md-6">
-                                            <label for="last_name" class="col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-                                            <input id="last_name" type="last_name" class="form-control @error('last_name') is-invalid @enderror" name="last_name" value="{{ $user->last_name }}" required autocomplete="last_name">
-
+                                            <label for="last_name">.</label>
+                                            <input id="last_name" type="text" class="form-control @error('last_name') is-invalid @enderror" placeholder="Last Name" name="last_name" required>
                                             @error('last_name')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
@@ -335,19 +333,33 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="email">Email Address*</label>
-                                        <input type="text" class="form-control" placeholder="email" required
-                                        name="email">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="subject">Subject*</label>
-                                        <input type="text" class="form-control" placeholder="subject" required
-                                        name="subject">
+                                        <label for="email">{{ __('Email Address*') }}</label>
+                                        <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" placeholder="email" name="email" required>
+                                        @error('email')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="message">Message*</label>
-                                        <textarea class="form-control" placeholder="your mesasge :)" required name="message"></textarea>
+                                        <label for="subject">{{ __('Subject*') }}</label>
+                                        <input id="subject" type="text" class="form-control @error('subject') is-invalid @enderror" placeholder="subject" name="subject" required>
+                                        @error('subject')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="message">{{ __('Message*') }}</label>
+                                        <input id="message" type="text" class="form-control @error('message') is-invalid @enderror" placeholder="your message :)" name="message" required>
+                                        @error('message')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="modal-footer">

@@ -145,6 +145,18 @@ class SettingsController extends Controller
         //
     }
 
+    public function contact(Request $request)
+    {
+        $this->validate($request,[
+            'first_name' => 'required|min:3|max:185',
+            'last_name' => 'required|min:3|max:185',
+            'email' => 'required|email|min:3|max:185',
+            'subject' => 'required|min:3|max:185',
+            'message' => 'required|min:3|max:185'
+        ]);
+        return $request->all();
+        //
+    }
     /**
      * Display the specified resource.
      *

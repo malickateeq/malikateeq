@@ -22,6 +22,8 @@ Route::get('/clear-cache', function() {
     // return 'DONE'; //Return anything
     return redirect (url('/'));
 });
+
+Route::post('/contact', 'SettingsController@contact')->name('contact');
 Route::get('/home', 'SettingsController@dashboard')->name('home')->middleware('auth');
 Route::get('/site-settings', 'SettingsController@site_settings')->name('site-settings')->middleware('auth');
 Route::get('/profile-settings', 'SettingsController@profile_settings')->name('profile-settings')->middleware('auth');

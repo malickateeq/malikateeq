@@ -288,9 +288,74 @@
 
                     <div class="row">
                         <div class="col-lg-6 col-md-10 col-sm-6 col-xs-6 btns my-2">
-                            <a href="{{$settings->btn3_link}}" class="btn btn-outline-light btn-block ext-links" target="_blank">
+                            <button type="button" class="btn btn-outline-light btn-block ext-links"
+                            data-toggle="modal" data-target="#contactModal">
                                 {{$settings->btn3_text}}
-                            </a>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade bd-example-modal-lg" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModal" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-dark text-center" id="contactModalLabel">CONTACT</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            
+                            <form method="POST" action="{{ route('contact') }}">
+                                @csrf
+                                <div class="modal-body text-dark">
+                                    <div class="row name">
+                                        <div class="form-group col-md-6">
+                                            <label for="first_name" class="col-form-label text-md-right">{{ __('First Name') }}</label>
+                                            <input id="first_name" type="first_name" class="form-control @error('first_name') is-invalid @enderror" name="first_name" value="{{ $user->first_name }}" required autocomplete="first_name">
+
+                                            @error('first_name')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+                                        </div>
+
+                                        <div class="form-group col-md-6">
+                                            <label for="last_name" class="col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                                            <input id="last_name" type="last_name" class="form-control @error('last_name') is-invalid @enderror" name="last_name" value="{{ $user->last_name }}" required autocomplete="last_name">
+
+                                            @error('last_name')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="email">Email Address*</label>
+                                        <input type="text" class="form-control" placeholder="email" required
+                                        name="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="subject">Subject*</label>
+                                        <input type="text" class="form-control" placeholder="subject" required
+                                        name="subject">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="message">Message*</label>
+                                        <textarea class="form-control" placeholder="your mesasge :)" required name="message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </form>
+                            </div>
                         </div>
                     </div>
 

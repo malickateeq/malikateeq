@@ -22,9 +22,9 @@ Route::get('/clear-cache', function() {
     // return 'DONE'; //Return anything
     return redirect (url('/'));
 });
-Route::get('/home', 'SettingsController@dashboard')->name('home');
-Route::get('/site-settings', 'SettingsController@site_settings')->name('site-settings');
-Route::get('/profile-settings', 'SettingsController@profile_settings')->name('profile-settings');
+Route::get('/home', 'SettingsController@dashboard')->name('home')->middleware('auth');
+Route::get('/site-settings', 'SettingsController@site_settings')->name('site-settings')->middleware('auth');
+Route::get('/profile-settings', 'SettingsController@profile_settings')->name('profile-settings')->middleware('auth');
 
-Route::post('/update-profile', 'SettingsController@update_profile')->name('update-profile-settings');
-Route::post('/update-site', 'SettingsController@update_site')->name('update-site-settings');
+Route::post('/update-profile', 'SettingsController@update_profile')->name('update-profile-settings')->middleware('auth');
+Route::post('/update-site', 'SettingsController@update_site')->name('update-site-settings')->middleware('auth');

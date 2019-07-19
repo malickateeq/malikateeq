@@ -24,6 +24,7 @@ Route::get('/clear-cache', function() {
 });
 
 Route::post('/contact', 'SettingsController@contact')->name('contact');
+Route::get('/send', 'SettingsController@send')->name('send');
 Route::get('/home', 'SettingsController@dashboard')->name('home')->middleware('auth');
 Route::get('/site-settings', 'SettingsController@site_settings')->name('site-settings')->middleware('auth');
 Route::get('/profile-settings', 'SettingsController@profile_settings')->name('profile-settings')->middleware('auth');

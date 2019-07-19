@@ -8,6 +8,11 @@ use App\User;
 use File;
 use Illuminate\Http\Request;
 
+//For emails
+// use Mail;
+use App\Mail\ContactMail;
+use Illuminate\Support\Facades\Mail;
+
 class SettingsController extends Controller
 {
     /**
@@ -147,14 +152,34 @@ class SettingsController extends Controller
 
     public function contact(Request $request)
     {
-        $this->validate($request,[
-            'first_name' => 'required|min:3|max:185',
-            'last_name' => 'required|min:3|max:185',
-            'email' => 'required|email|min:3|max:185',
-            'subject' => 'required|min:3|max:185',
-            'message' => 'required|min:3|max:185'
-        ]);
-        return $request->all();
+        // $this->validate($request,[
+        //     'first_name' => 'required|min:3|max:185',
+        //     'last_name' => 'required|min:3|max:185',
+        //     'email' => 'required|email|min:3|max:185',
+        //     'subject' => 'required|min:3|max:185',
+        //     'message' => 'required|min:4|max:185'
+        // ]);
+        // $me = User::where('id', '=', '1')->first();
+        Mail::send(['text'=> 'mail'], ['name', 'malik'], function($message){
+            $message->to('malickateeq@gmail.com', 'Hacker')->subject('test mail');
+            $message->from('malickateeq@gmail.com', 'From');
+        });
+        //
+    }
+    public function send()
+    {
+        // $this->validate($request,[
+        //     'first_name' => 'required|min:3|max:185',
+        //     'last_name' => 'required|min:3|max:185',
+        //     'email' => 'required|email|min:3|max:185',
+        //     'subject' => 'required|min:3|max:185',
+        //     'message' => 'required|min:4|max:185'
+        // ]);
+        // $me = User::where('id', '=', '1')->first();
+        Mail::send(['text'=> 'mail'], ['name', 'malik'], function($message){
+            $message->to('malickateeq@gmail.com', 'Hacker')->subject('test mail');
+            $message->from('malickateeq@gmail.com', 'From');
+        });
         //
     }
     /**
